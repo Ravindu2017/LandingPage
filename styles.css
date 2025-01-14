@@ -1,0 +1,15 @@
+#center {
+  display: grid;
+}
+
+#leftInfo {
+  border-style: solid;
+}
+
+#mainInfo {
+  border-style: dotted;
+}
+
+#rightInfo {
+  border-style: dashed;
+}
