@@ -1,15 +1,133 @@
-#center {
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+.web-grid {
   display: grid;
+  grid-auto-columns: 1fr;
+  gap: 1.5rem;
+  grid-template-areas:
+    "left content content right"
+    ".    content content      ."
+    ".    content content      .";
+  background-color: aquamarine;
 }
 
 #leftInfo {
   border-style: solid;
+  grid-area: left;
+  background-color: grey;
+  height: 100%;
+  width: 100%;
 }
 
 #mainInfo {
   border-style: dotted;
+  grid-area: content;
+  background-color: whitesmoke;
 }
 
 #rightInfo {
   border-style: dashed;
+  grid-area: right;
+  background-color: grey;
 }
+
+#footerInfo {
+  border-style: dashed;
+  background-color: black;
+}
+
+#summaryOfMe {
+  grid-area: content;
+  display: grid;
+  grid-template-areas:
+    "picture info info"
+    "final final final";
+  grid-auto-columns: 1fr;
+  gap: 1.5rem;
+  padding-block: 2rem;
+  margin-inline: auto;
+  background-color: #2196f3;
+}
+
+.pictureOfMe {
+  grid-area: picture;
+  border-style: dashed;
+}
+
+.info {
+  grid-area: info;
+  border-style: solid;
+}
+.final {
+  grid-area: final;
+  border-style: dotted;
+}
+
+/* 1638 x 2048 */
+/* .resume {
+  width: 20vw;
+  height: 20vw * 1.25;
+} */
+
+.pictureOfMe > img {
+  object-fit: cover;
+  width: 100%;
+  max-height: 100%;
+}
+
+.info > p {
+  text-align: justify;
+  border-style: solid;
+  padding: 1vw;
+}
+
+.final > p {
+  text-align: justify;
+  padding: 1vw;
+}
+
+@media (max-width: 70rem) {
+  .web-grid {
+    grid-template-areas:
+      "left"
+      "content"
+      "content"
+      "right";
+  }
+}
+/* 
+@media (min-width: 50000em) {
+  .web-grid {
+    grid-template-areas:
+      "left"
+      "content"
+      "right";
+  }
+} */
