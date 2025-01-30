@@ -37,32 +37,59 @@ select {
     "left content content right"
     ".    content content      ."
     ".    content content      .";
-  background-color: aquamarine;
+  /* background-color: rgb(34, 35, 35); */
+  background-color: #ecf0f4;
+  opacity: 99%;
 }
 
 #leftInfo {
-  border-style: solid;
+  /* border-style: solid; */
   grid-area: left;
-  background-color: grey;
-  height: 100%;
-  width: 100%;
+  background-color: #fcfdff;
+  width: 80%;
   position: sticky;
 }
 
+.contact-details {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    margin: 2rem;
+    padding: 0.5rem;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.contact-details:hover {
+  transform: scale(1.05);
+}
+
 #mainInfo {
-  border-style: dotted;
+  /* border-style: dotted; */
   grid-area: content;
   background-color: whitesmoke;
 }
 
 #rightInfo {
-  border-style: dashed;
+  /* border-style: dashed; */
   grid-area: right;
-  background-color: grey;
+  background-color: #fcfdff;
+}
+
+.tidbits {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  margin: 2rem;
+  padding: 0.5rem;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.tidbits:hover {
+  transform: scale(1.05);
 }
 
 #footerInfo {
-  border-style: dashed;
+  /* border-style: dashed; */
   background-color: black;
 }
 
@@ -76,22 +103,28 @@ select {
   gap: 1.5rem;
   padding-block: 2rem;
   margin-inline: auto;
-  background-color: #2196f3;
+  background-color: #ecf0f4;
   /* height:100vh; */
 }
 
 .pictureOfMe {
   grid-area: picture;
-  border-style: dashed;
+  /* border-style: dashed; */
 }
 
 .info {
   grid-area: info;
-  border-style: solid;
+  /* border-style: solid; */
+  background: #fcfdff;
+  border-radius: 10px;
+  padding: 0.5rem;
 }
 .final {
   grid-area: final;
-  border-style: dotted;
+  /* border-style: dotted; */
+  background: #fcfdff;
+  border-radius: 10px;
+  padding: 0.5rem;
 }
 
 /* 1638 x 2048 */
@@ -104,11 +137,20 @@ select {
   object-fit: cover;
   width: 100%;
   height: 100%;
+  border-radius: 10px;
+}
+
+.pictureOfMe > img:hover {
+  content: url(jobImageTwo.jpeg);
+  /* object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px; */
 }
 
 .info > p {
   text-align: justify;
-  border-style: solid;
+  /* border-style: solid; */
   padding: 1vw;
 }
 
