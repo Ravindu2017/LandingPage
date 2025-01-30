@@ -46,8 +46,6 @@ select {
   /* border-style: solid; */
   grid-area: left;
   background-color: #fcfdff;
-  width: 80%;
-  position: sticky;
 }
 
 .contact-details {
@@ -234,8 +232,8 @@ select {
   position: absolute;
   top: 0;
   left: 0;
-  height: 100vh;
-  width: 20vw;
+  height: 90.25%;
+  width: 17vw;
   background: grey;
   transform: translateY(-100%);
   transition: transform 0.3s ease-in-out;
@@ -243,9 +241,20 @@ select {
   padding-top: 5vw;
 }
 
+.hidden-menu > ul {
+  background: #fcfdff;
+  margin: auto;
+  padding: auto;
+}
+
 .burger-menu:checked ~ .hidden-menu {
   transform: translateX(0);
 }
+
+/* .contact-details span:nth-child(n):hover {
+  animation: deets 4s 1;
+  -webkit-animation: deets 4s 1;
+} */
 
 @media (max-width: 90rem) {
   .web-grid {
@@ -261,6 +270,10 @@ select {
     "picture info info"
     "final final final"
     "final final final";
+  }
+
+  .hidden-menu {
+    height: 95%;
   }
 }
 
@@ -281,5 +294,102 @@ select {
 
   .hidden-menu {
     width: 40%;
+    height: 100%;
   }
+}
+
+
+.contact-details:hover span {
+  animation: deets 1s forwards;
+  -webkit-animation: deets 1s forwards;
+}
+
+.contact-details:hover span:nth-child(1) {
+  animation-delay: 0s;
+}
+.contact-details:hover span:nth-child(2) {
+  animation-delay: 1s; /*142ms*/
+}
+.contact-details:hover span:nth-child(3) {
+  animation-delay: 2s;
+}
+.contact-details:hover span:nth-child(4) {
+  animation-delay: 3s;
+}
+.contact-details:hover span:nth-child(5) {
+  animation-delay: 4s;
+}
+.contact-details:hover span:nth-child(6) {
+  animation-delay: 5s;
+}
+.contact-details:hover span:nth-child(7) {
+  animation-delay: 6s;
+}
+
+@keyframes deets {
+  0% {color: black;}
+  50% {color: blue;}
+  100%{color: black;}
+}
+
+
+@-webkit-keyframes deets {
+  0% {color: black;}
+  50% {color: blue;}
+  100%{color: black;}
+}
+
+.contact-details:hover span:nth-child(2) {
+  animation-name: deets-two; /*142ms*/
+}
+.contact-details:hover span:nth-child(3) {
+  animation-name: deets-three;
+}
+.contact-details:hover span:nth-child(4) {
+  animation-name: deets-four;
+}
+.contact-details:hover span:nth-child(5) {
+  animation-name: deets-five;
+}
+.contact-details:hover span:nth-child(6) {
+  animation-name: deets-six;
+}
+.contact-details:hover span:nth-child(7) {
+  animation-name: deets-seven;
+}
+
+@keyframes deets-two {
+  0% {color: black;}
+  50% {color: red};
+  100%{color: black;}
+}
+
+@keyframes deets-three {
+  0% {color: black;}
+  50% {color: yellow};
+  100%{color: black;}
+}
+
+@keyframes deets-four {
+  0% {color: black;}
+  50% {color: blue};
+  100%{color: black;}
+}
+
+@keyframes deets-five {
+  0% {color: black;}
+  50% {color: green};
+  100%{color: black;}
+}
+
+@keyframes deets-six {
+  0% {color: black;}
+  50% {color: red};
+  100%{color: black;}
+}
+
+@keyframes deets-seven {
+  0% {color: black;}
+  50% {color: gold};
+  100%{color: black;}
 }
