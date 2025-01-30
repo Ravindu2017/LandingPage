@@ -137,6 +137,74 @@ select {
 
 */
 
+
+/* 
+@media (min-width: 50000em) {
+  .web-grid {
+    grid-template-areas:
+      "left"
+      "content"
+      "right";
+  }
+} */
+
+.burger-menu {
+  display: none;
+}
+
+.burger-menu-button {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  z-index: 10;
+  padding: 1vw;
+}
+
+.burger-menu-button span {
+  background-color: orange;
+  height: 5px;
+  width: 100%;
+  border-radius: 2px;
+  transition: all 0.3s ease-in-out;
+}
+
+.burger-menu:checked + .burger-menu-button span:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+
+.burger-menu:checked + .burger-menu-button span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger-menu:checked + .burger-menu-button span:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+.burger-menu:checked ~ .menu {
+  transform: translateX(0);
+}
+
+.hidden-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 20vw;
+  background: grey;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 9;
+  padding-top: 5vw;
+}
+
+.burger-menu:checked ~ .hidden-menu {
+  transform: translateX(0);
+}
+
 @media (max-width: 90rem) {
   .web-grid {
     grid-template-areas:
@@ -168,17 +236,8 @@ select {
     "info    info"
     "final   final";
   }
-}
-/* 
-@media (min-width: 50000em) {
-  .web-grid {
-    grid-template-areas:
-      "left"
-      "content"
-      "right";
-  }
-} */
 
-.burger-menu {
-  display: none;
+  .hidden-menu {
+    width: 40%;
+  }
 }
